@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Pet Adoption App')),
-      body: const Center(child: Text('Em construção')),
+      body: const Center(child: Text('Em construção..')),
     );
   }
 }
