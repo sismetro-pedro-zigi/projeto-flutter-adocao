@@ -95,21 +95,28 @@ class IntroScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 32),
-              FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: AppTheme.warmAccent,
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                ),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => const PetsScreen()),
-                  );
-                },
-                child: const Text('Ver pets disponíveis para adoção'),
-              ),
             ],
+          ),
+        ),
+      ),
+      // Fica fixo no rodape da tela, fora da area de rolagem, para que
+      // o usuario sempre consiga tocar nele, mesmo tendo rolado para
+      // ler o conteudo acima.
+      bottomNavigationBar: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: FilledButton(
+            style: FilledButton.styleFrom(
+              backgroundColor: AppTheme.warmAccent,
+              padding: const EdgeInsets.symmetric(vertical: 16),
+            ),
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const PetsScreen()),
+              );
+            },
+            child: const Text('Ver pets disponíveis para adoção'),
           ),
         ),
       ),
