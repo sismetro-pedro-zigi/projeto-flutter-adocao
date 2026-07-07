@@ -9,9 +9,13 @@ import '../models/dog.dart';
 /// reaproveitado em outras telas (ex: lista de favoritos) sem
 /// duplicar codigo.
 class DogCard extends StatelessWidget {
-  const DogCard({super.key, required this.dog});
+  const DogCard({super.key, required this.dog, this.onTap});
 
   final Dog dog;
+
+  /// Chamado quando o card e tocado. O card nao sabe (nem precisa
+  /// saber) o que acontece no toque -- quem decide e quem o utiliza.
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +23,7 @@ class DogCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       clipBehavior: Clip.antiAlias,
       child: ListTile(
+        onTap: onTap,
         contentPadding: const EdgeInsets.all(8),
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(8),
