@@ -7,7 +7,9 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Arca de Noé'), findsOneWidget);
+    // O titulo "Arca de Noe" agora faz parte da imagem da logo, entao
+    // verificamos o subtitulo (que continua sendo um Text separado).
+    expect(find.text('Marechal Cândido Rondon - PR'), findsOneWidget);
 
     // O FakePetService simula 1s de atraso; avancamos o tempo do teste
     // para o carregamento terminar antes do teste finalizar (mesmo a

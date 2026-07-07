@@ -23,17 +23,14 @@ class IntroScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 16),
-              const _LogoPlaceholder(),
-              const SizedBox(height: 24),
-              Text(
-                'Arca de Noé',
-                textAlign: TextAlign.center,
-                style: textTheme.headlineMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: colorScheme.primary,
+              Center(
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  width: 220,
+                  semanticLabel: 'Logo da ONG Arca de Noé',
                 ),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 8),
               Text(
                 'Marechal Cândido Rondon - PR',
                 textAlign: TextAlign.center,
@@ -118,36 +115,6 @@ class IntroScreen extends StatelessWidget {
             },
             child: const Text('Ver pets disponíveis para adoção'),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Espaco reservado para a logo da Arca de Noe.
-///
-/// TODO: quando a logo (imagem) estiver pronta, trocar o Icon abaixo
-/// por Image.asset('assets/images/logo.png') e registrar o arquivo
-/// em pubspec.yaml na secao "flutter > assets".
-class _LogoPlaceholder extends StatelessWidget {
-  const _LogoPlaceholder();
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
-    return Center(
-      child: Container(
-        width: 140,
-        height: 140,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: colorScheme.primaryContainer,
-        ),
-        child: Icon(
-          Icons.pets,
-          size: 64,
-          color: colorScheme.onPrimaryContainer,
         ),
       ),
     );
