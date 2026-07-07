@@ -7,5 +7,9 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Pet Adoption App'), findsOneWidget);
+
+    // O FakePetService simula 1s de atraso; avancamos o tempo do teste
+    // para o carregamento terminar antes do teste finalizar.
+    await tester.pump(const Duration(seconds: 1));
   });
 }
