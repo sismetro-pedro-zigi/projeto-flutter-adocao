@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'providers/dog_provider.dart';
 import 'screens/home_screen.dart';
 import 'services/fake_pet_service.dart';
+import 'utils/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,7 @@ class MyApp extends StatelessWidget {
       create: (_) => DogProvider(FakePetService())..loadDogs(),
       child: MaterialApp(
         title: 'Pet Adoption App',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+        theme: AppTheme.light,
         home: const HomeScreen(),
       ),
     );
