@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'providers/dog_provider.dart';
-import 'screens/home_screen.dart';
+import 'screens/intro_screen.dart';
 import 'services/fake_pet_service.dart';
 import 'utils/app_theme.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Pet Adoption App',
         theme: AppTheme.light,
-        home: const HomeScreen(),
+        home: const IntroScreen(),
       ),
     );
   }

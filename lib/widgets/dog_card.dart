@@ -5,7 +5,7 @@ import '../models/dog.dart';
 
 /// Cartao visual de um pet disponivel para adocao.
 ///
-/// Widget reutilizavel: hoje e usado na HomeScreen, mas pode ser
+/// Widget reutilizavel: hoje e usado na PetsScreen, mas pode ser
 /// reaproveitado em outras telas (ex: lista de favoritos) sem
 /// duplicar codigo.
 class DogCard extends StatelessWidget {

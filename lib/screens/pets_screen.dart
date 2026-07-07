@@ -5,9 +5,9 @@ import '../providers/dog_provider.dart';
 import '../widgets/dog_card.dart';
 import 'dog_detail_screen.dart';
 
-/// Tela inicial do app: mostra a lista de pets disponiveis para adocao.
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+/// Tela que mostra a lista de pets disponiveis para adocao.
+class PetsScreen extends StatelessWidget {
+  const PetsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
