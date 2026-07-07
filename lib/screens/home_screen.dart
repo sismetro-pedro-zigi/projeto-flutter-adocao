@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/dog_provider.dart';
 import '../widgets/dog_card.dart';
+import 'dog_detail_screen.dart';
 
 /// Tela inicial do app: mostra a lista de pets disponiveis para adocao.
 class HomeScreen extends StatelessWidget {
@@ -14,11 +15,11 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Pet Adoption App')),
-      body: _buildBody(dogProvider),
+      body: _buildBody(context, dogProvider),
     );
   }
 
-  Widget _buildBody(DogProvider dogProvider) {
+  Widget _buildBody(BuildContext context, DogProvider dogProvider) {
     if (dogProvider.isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -31,7 +32,15 @@ class HomeScreen extends StatelessWidget {
       itemCount: dogProvider.dogs.length,
       itemBuilder: (context, index) {
         final dog = dogProvider.dogs[index];
-        return DogCard(dog: dog);
+        return DogCard(
+          dog: dog,
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => DogDetailScreen(dog: dog)),
+            );
+          },
+        );
       },
     );
   }

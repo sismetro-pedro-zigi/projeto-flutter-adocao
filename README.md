@@ -1,17 +1,7 @@
-# pet_adoption_app
+# APP de adoção de animais
 
-A new Flutter project.
+Aplicativo desenvolvido com o objetivo de aprender e praticar Flutter.
 
-## Getting Started
+Como referência para a estrutura e organização das informações, foi utilizada a ONG Arca de Noé, localizada em minha cidade. Todo o projeto tem caráter exclusivamente educacional e não possui qualquer vínculo, parceria ou autorização oficial da instituição.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este aplicativo não possui finalidade comercial, não gera receita e foi desenvolvido apenas para fins de estudo e demonstração de conhecimentos em Flutter.
