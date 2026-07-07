@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/dog_provider.dart';
+import '../widgets/dog_card.dart';
 
 /// Tela inicial do app: mostra a lista de pets disponiveis para adocao.
 class HomeScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class HomeScreen extends StatelessWidget {
       itemCount: dogProvider.dogs.length,
       itemBuilder: (context, index) {
         final dog = dogProvider.dogs[index];
-        return ListTile(title: Text(dog.name));
+        return DogCard(dog: dog);
       },
     );
   }
