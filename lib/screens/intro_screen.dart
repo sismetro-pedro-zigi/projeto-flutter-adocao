@@ -108,7 +108,10 @@ class IntroScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 16),
             ),
             onPressed: () {
-              Navigator.pushReplacement(
+              // push (nao pushReplacement) mantem a IntroScreen na pilha
+              // de navegacao, permitindo voltar para ela a partir da
+              // PetsScreen.
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => const PetsScreen()),
               );
